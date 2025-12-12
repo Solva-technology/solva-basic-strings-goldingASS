@@ -23,27 +23,21 @@ def get_first_and_last_char(s: str) -> str:
     Возвращает строку, состоящую из первого и последнего символа s.
     Пример: "hello" -> "ho"
     """
-    # TODO: Напишите ваш код здесь
-    ...
-    return # Вставьте сюда результат
+    return s[0] + s[-1]
 
 def get_middle_chars(s: str) -> str:
     """
     Возвращает все символы строки s, кроме первого и последнего.
     Пример: "hello" -> "ell"
     """
-    # TODO: Напишите ваш код здесь
-    ...
-    return # Вставьте сюда результат
+    return s[1:-1]
 
 def reverse_string(s: str) -> str:
     """
     Возвращает строку s в обратном порядке.
     Пример: "hello" -> "olleh"
     """
-    # TODO: Напишите ваш код здесь
-    ...
-    return # Вставьте сюда результат
+    return s[::-1]
 
 def is_palindrome(s: str) -> bool:
     """
@@ -52,9 +46,8 @@ def is_palindrome(s: str) -> bool:
     Палиндром — это слово или фраза, которые читаются одинаково в обоих направлениях.
     Пример: "racecar" -> True, "hello" -> False
     """
-    # TODO: Напишите ваш код здесь
-    ...
-    return # Вставьте сюда результат
+    processed_str = ''.join(filter(str.isalnum, s)).lower()
+    return processed_str == processed_str[::-1]
 
 def count_vowels(s: str) -> int:
     """
@@ -62,24 +55,19 @@ def count_vowels(s: str) -> int:
     Регистр букв не должен иметь значения.
     Пример: "Hello World" -> 3
     """
-    # TODO: Напишите ваш код здесь
-    ...
-    return # Вставьте сюда результат
+    vowels = 'aeiouAEIOU'
+    return sum(1 for char in s if char in vowels)
 
 def remove_spaces(s: str) -> str:
     """
     Удаляет все пробелы из строки s.
     Пример: "hello world" -> "helloworld"
     """
-    # TODO: Напишите ваш код здесь
-    ...
-    return # Вставьте сюда результат
+    return s.replace(' ', '')
 
 def capitalize_words(s: str) -> str:
     """
     Делает заглавной первую букву каждого слова в строке s.
     Пример: "hello world" -> "Hello World"
     """
-    # TODO: Напишите ваш код здесь
-    ...
-    return # Вставьте сюда результат
+    return s.title()
